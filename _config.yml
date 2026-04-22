@@ -1,8 +1,10 @@
 title: "김인문의 웹사이트"
 description: "인문학과 데이터과학의 만남"
 theme: minima
+
 author: 
   name: "김성하"
   email: "seongha31@snu.ac.kr"
+
 header_pages:
-  -about.md
+  - about.md
