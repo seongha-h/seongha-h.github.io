@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "fav books"
+title: "독서 목록"
 ---
 
 
