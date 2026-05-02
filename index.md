@@ -18,3 +18,5 @@ title: "홈"
 - 문학
 - 역사
 - 데이터 분석
+
+<script src=”/assets/js/hello.js”></script>
