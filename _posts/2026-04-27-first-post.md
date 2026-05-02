@@ -2,7 +2,7 @@
 layout: post
 title: "Jekyll로 첫 글을 씁니다"
 date: 2026-04-27 15:46:00 +0900
-categories: [수업, 일기]
+categories: [인물]
 tags: [jekyll, markdown]
 author: 김인문
 ---
