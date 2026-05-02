@@ -19,4 +19,4 @@ title: "홈"
 - 역사
 - 데이터 분석
 
-<script src=”/assets/js/hello.js”></script>;
+<script src="/assets/js/hello.js"></script>

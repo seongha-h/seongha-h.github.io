@@ -21,4 +21,4 @@ HTML, CSS, JavaScript, Jekyll을 배우며
 
 [오늘의 추천 플레이리스트](https://www.youtube.com/watch?v=FSg2laEjEXM&list=RDFSg2laEjEXM&start_radio=1)
 
-<script src="/assets/js/hello.js"></script>
+<script src="/assets/js/test.js"></script>
