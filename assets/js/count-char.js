@@ -11,3 +11,16 @@ for (const ch of text) {
 
 console.log(`"${text}"`);
 console.log(`'${target}' 글자는 ${count}에 등장합니다.`);
+
+let hangul =0;
+let total=0;
+for (const ch of text){
+    if (ch !== " "){
+        total++;
+        if (ch>="가" && <= "힣")
+            hangul++;
+    }
+}
+
+const ratio = (hangul/total)*100;
+console.log(`한글글자비율: (${ratio.toFixed(1)}`);
