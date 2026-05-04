@@ -3,4 +3,4 @@ layout: page
 title: 'javascript test'
 ---
 
-<script src="/assests/js.count-char.js"></script>
+<script src="/assets/js.count-char.js"></script>
