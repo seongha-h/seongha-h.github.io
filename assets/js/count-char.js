@@ -17,7 +17,7 @@ let total=0;
 for (const ch of text){
     if (ch !== " "){
         total++;
-        if (ch>="가" && <= "힣")
+        if (ch>="가" && ch<= "힣")
             hangul++;
     }
 }
