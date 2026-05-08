@@ -28,5 +28,5 @@ console.log(title)
 const bigTitles = works.filter(work=>work.length >= 3);
 console.log(bigTitles)
 for (let i =0;i<works.length;i++){
-    console.log(`${i}번째 작품: ${works[i]}`)
+    console.log(`${i+1}번째 작품: ${works[i]}`)
 }
