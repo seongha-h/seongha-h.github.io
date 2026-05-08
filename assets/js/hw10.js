@@ -60,3 +60,6 @@ for (let i=0;i<targets.length;i++){
         maxIdx = i
 }
 console.log(`가장 자주 나온 글자: '${targets[maxIdx]}' (${counts[maxIdx]}번)`);
+
+
+// 해당 과제를 위해 생성형 ai를 사용한 내역입니다 https://chatgpt.com/share/69fde17f-2e78-83e9-9568-4338023ccfa7
