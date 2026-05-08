@@ -17,3 +17,16 @@ console.log(`1908년: ${classifyEra(1908)}`);
 console.log(`1936년: ${classifyEra(1936)}`);
 console.log(`1972년: ${classifyEra(1972)}`);
 console.log(`2025년: ${classifyEra(2025)}`);
+
+// Q2
+const works = ["날개", "오감도", "지주회시", "종생기", "권태"];
+console.log(works.length);
+console.log(works[0]);
+console.log(works[works.length - 1]);
+const title = works.map(work => `「${work}」`);
+console.log(title)
+const bigTitles = works.filter(work=>work.length >= 3);
+console.log(bigTitles)
+for (let i =0;i<works.length;i++){
+    console.log(`${i}번째 작품: ${works[i]}`)
+}
