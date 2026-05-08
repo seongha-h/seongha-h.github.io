@@ -38,8 +38,8 @@ function countChar(text, target){
         if (ch === target){
             count++;
         }}
-    console.log(`${text}에서 ${target}은 ${count}번 등장합니다`)
+    return count
 }
-countChar("박씨는 이씨에게 시집간 김씨의 외사촌 동생이다.", "씨")
-countChar("이상의 「날개」는 1936년 작품이다.", "이")
-countChar("banana", "a")
+console.log(`"박씨는 이씨에게 시집간 김씨의 외사촌 동생이다."에서 '씨'는 ${countChar("박씨는 이씨에게 시집간 김씨의 외사촌 동생이다.", "씨")}번 등장합니다.`);
+console.log(`"이상의 「날개」는 1936년 작품이다."에서 '이'는 ${countChar("이상의 「날개」는 1936년 작품이다.", "이")}번 등장합니다.`);
+console.log(`"banana"에서 'a'는 ${countChar("banana", "a")}번 등장합니다.`);
