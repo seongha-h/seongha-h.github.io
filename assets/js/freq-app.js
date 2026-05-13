@@ -26,7 +26,7 @@ function drawList(targets, counts) {
     list.textContent = "";        // 기존 목록 비우기
     for (let i = 0; i < targets.length; i++) {
         const li = document.createElement("li");
-        li.textContent = `${targets[i]}: ${counts[i]}번`;
+        li.textContent = `'${targets[i]}': ${counts[i]}번`;
         list.appendChild(li);
     }
 }
