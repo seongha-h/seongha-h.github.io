@@ -4,7 +4,7 @@ title: 글자 빈도 분석
 permalink: /freq-app/
 ---
 
-<form id="freq-from">
+<form id="freq-form">
     <p>분석할 글</p>
     <textarea id="text-input" rows="3" cols="50"></textarea>
     <p>셀 글자(쉼표로 구분):</p>
