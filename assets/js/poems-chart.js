@@ -20,7 +20,7 @@ function drawChart(rows) {
     const labels =rows.map(r=> r.author);
     const counts =rows.map(r=> r.count);
 
-    const canvas = document.querySelector("poems-chart");
+    const canvas = document.querySelector("#poems-chart");
     new Chart(canvas,{
         type:"bar",
         data: {
