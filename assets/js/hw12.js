@@ -70,6 +70,7 @@ fetch("/data/nobel-literature.csv")
           data: counts,
           borderColor: "rgba(54, 162, 235, 1)",
           backgroundColor: "rgba(54, 162, 235, 0.2)"
+          fill:true
         }]
       },
       options: {
