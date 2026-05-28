@@ -69,7 +69,7 @@ fetch("/data/nobel-literature.csv")
           label: "노벨문학상 수상자 수",
           data: counts,
           borderColor: "rgba(54, 162, 235, 1)",
-          backgroundColor: "rgba(54, 162, 235, 0.2)"
+          backgroundColor: "rgba(54, 162, 235, 0.2)",
           fill:true
         }]
       },
