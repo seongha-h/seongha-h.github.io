@@ -4,10 +4,9 @@
 // Q1
 fetch("/data/sillok.json")
 .then(response => response.json())
-.then(records => {
-    const 
-
+.then(records => {drawChart(records)
 });
+
 function drawChart(rows){
     const labels = rows.map(r=>r.king);
     const counts = rows.map(r=>r.volumes);
