@@ -18,7 +18,7 @@ function getWords(text) {
         .filter(w => w.length > 0);
 }
 
-}
+
 //3. 가져온 배열에서 불용어 지우기
 function removeStopwords(words,stopwords){
     return words.filter(w => !stopwords.includes(w));
