@@ -72,7 +72,7 @@ function drawChart(selector, top, color){
             labels:top.map(item =>item[0]), //단어
             datasets:[{
                 label:'빈도',
-                data:top.map(item =>item[1], //빈도
+                data:top.map(item =>item[1]), //빈도
                 backgroundColor: color
             }]
         },
