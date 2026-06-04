@@ -62,8 +62,8 @@ function analyze(text, stopwords) {
 
 // 텍스트 파일 3개를 동시에 불러오기
 Promise.all([
-    fetch("/data/scarlet.txt").then(r => r.text()),
-    fetch("/data/hound.txt").then(r => r.text()),
+    fetch("/data/frankenstein.txt")).then(r => r.text()),
+    fetch("/data/dracula.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
 ]).then(([scarletText, houndText, stopText]) => {
 
@@ -74,8 +74,8 @@ Promise.all([
     const scarletTop = analyze(scarletText, stopwords);
     const houndTop = analyze(houndText, stopwords);
 
-    drawChart("#chart-scarlet", scarletTop, "rgba(40, 167, 69, 0.6)");
-    drawChart("#chart-hound", houndTop, "rgba(220, 53, 69, 0.6)");
+    drawChart("#chart-frankenstein", frankensteinTop, "rgba(40, 167, 69, 0.6)");
+    drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
 });
 
 // 그래프 그리기
