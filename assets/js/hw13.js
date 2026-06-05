@@ -82,22 +82,27 @@ Promise.all([
 function drawChart(selector, top, color) {
     const canvas = document.querySelector(selector);
 
+    if (!canvas) {
+        console.error("canvas를 찾을 수 없습니다:", selector);
+        return;
+    }
+
     new Chart(canvas, {
         type: "bar",
         data: {
-            labels: top.map(item => item[0]), // 단어
+            labels: top.map(item => item[0]),
             datasets: [{
                 label: "빈도",
-                data: top.map(item => item[1]), // 빈도
+                data: top.map(item => item[1]),
                 backgroundColor: color
             }]
         },
         options: {
-            indexAxis: "y",                  // 가로 막대
-            maintainAspectRatio: false,      // 부모 div height에 맞춤
+            indexAxis: "y",
+            maintainAspectRatio: false,
             scales: {
                 x: { beginAtZero: true },
-                y: { ticks: { autoSkip: false } } // 라벨 30개 전부 표시
+                y: { ticks: { autoSkip: false } }
             }
         }
     });
