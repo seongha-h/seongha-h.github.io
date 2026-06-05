@@ -78,6 +78,24 @@ Promise.all([
     drawChart("#chart-frankenstein", frankensteinTop, "rgba(40, 167, 69, 0.6)");
     drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
 });
+Promise.all([
+    fetch("/data/frankenstein.txt").then(r => r.text()),
+    fetch("/data/dracula.txt").then(r => r.text()),
+    fetch("/data/stopwords-en.txt").then(r => r.text()),
+    fetch("/data/stopwords-custom.txt").then(r => r.text()),
+]).then(([frankensteinText, draculaText, stopText]) => {
+
+    const stopwords = stopText
+        .split(/\s+/)
+        .filter(w => w.length > 0);
+
+    const frankensteinTop = analyze(frankensteinText, stopwords);
+    const draculaTop = analyze(draculaText, stopwords);
+
+    drawChart("#chart-frankenstein", frankensteinTop, "rgba(40, 167, 69, 0.6)");
+    drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
+});
+
 
 // 그래프 그리기
 function drawChart(selector, top, color) {
