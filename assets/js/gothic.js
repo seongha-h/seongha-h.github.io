@@ -1,4 +1,4 @@
-// 1. Project Gutenberg 본문 부분만 추출하기
+
 function extractBody(text) {
     const startMark = "*** START OF THE PROJECT GUTENBERG EBOOK";
     const endMark = "*** END OF THE PROJECT GUTENBERG EBOOK";
@@ -16,6 +16,10 @@ function extractBody(text) {
 }
 
 
+
+
+
+
 // 종합: text → 상위 30개 단어 배열
 function analyze(text, stopwords) {
     const body = extractBody(text);
@@ -26,19 +30,27 @@ function analyze(text, stopwords) {
     return topN(counts, 30);
 }
 
-// 텍스트 파일 3개를 동시에 불러오기
+
 Promise.all([
-    fetch("/data/scarlet.txt").then(r => r.text()),
-    fetch("/data/hound.txt").then(r => r.text()),
+    fetch("/data/frankenstein.txt").then(r => r.text()),
+    fetch("/data/dracula.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
-]).then(([scarletText, houndText, stopwordsText]) => {
-    const stopwords = stopwordsText
+    fetch("/data/stopwords-custom.txt").then(r => r.text()),
+]).then(([frankensteinText, draculaText, stopText, customStopText]) => {
+
+    const basicStopwords = stopText
         .split(/\s+/)
         .filter(w => w.length > 0);
-    const scarletTop= analyze(scarletText, stopwords);
-    const houndTop= analyze(houndText, stopwords);
 
-    drawChart("#chart-scarlet", scarletTop, "rgba(220, 53, 69, 0.6)");
-    drawChart("#chart-hound", houndTop, "rgba(54, 162, 235, 0.6)");
+    const customStopwords = customStopText
+        .split(/\s+/)
+        .filter(w => w.length > 0);
+
+    const stopwords = basicStopwords.concat(customStopwords);
+
+    const frankensteinTop = analyze(frankensteinText, stopwords);
+    const draculaTop = analyze(draculaText, stopwords);
+
+    drawChart("#chart-frankenstein", frankensteinTop, "rgba(40, 167, 69, 0.6)");
+    drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
 });
-

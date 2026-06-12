@@ -7,7 +7,9 @@ author:
   email: "seongha31@snu.ac.kr"
 
 header_pages:
-  - about.md
-  - projects.md
-  - books.md
-  - js_test.md
+- about.md
+- projects.md
+- compare.md
+- gothic.md
+- analyzer.md
+ 
