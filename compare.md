@@ -14,5 +14,5 @@ permalink: /compare/
     </div>
 </div>
 {% include chartjs.html %}
-<script scr="/assets/js/analysis.js"></script>
-<script src="/assets/js/compare.js"></script>
+<script src="{{ '/assets/js/analysis.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/compare.js' | relative_url }}"></script>
