@@ -24,4 +24,4 @@ title: "포트폴리오"
 [pdf 보기](assets/img/결정장애조.pdf)
 ### 미래 서비스 사용 시나리오
 해당 에이전트가 어떻게 활용될 수 있을지 AI 영상을 이용해서 표현해보았습니다
-![영상 링크](https://youtu.be/E_PTjOm0Et8)
+[영상 링크](https://youtu.be/E_PTjOm0Et8)
