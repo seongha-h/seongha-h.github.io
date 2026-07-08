@@ -1,0 +1,361 @@
+:root {
+  --bg: #f4f0ea;
+  --surface: #fffdf8;
+  --card: #ffffff;
+  --line: #e1d8cd;
+  --text: #221c17;
+  --muted: #746a61;
+  --green: #2f7a5f;
+  --green-dark: #1f4e40;
+  --amber: #c98238;
+  --red: #b75835;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100svh;
+  margin: 0;
+  background: var(--bg);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+}
+
+.owner-app {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  min-height: 100svh;
+}
+
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 28px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  background: #fbf7f1;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand > span {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--green-dark);
+  color: white;
+  font-weight: 850;
+}
+
+.brand div {
+  display: grid;
+  gap: 4px;
+}
+
+.brand small,
+.topbar p,
+.metric-card span,
+.metric-card small,
+.scan-card p,
+.rule-card p,
+.activity-card p,
+.activity-card span,
+label {
+  color: var(--muted);
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar a {
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #504740;
+  font-weight: 750;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: var(--green-dark);
+  color: white;
+}
+
+.workspace {
+  min-width: 0;
+  padding: 30px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.topbar h1 {
+  margin-top: 6px;
+  font-size: 30px;
+  line-height: 1.18;
+}
+
+.topbar button,
+.section-head button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 750;
+}
+
+.panel {
+  display: grid;
+  gap: 18px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric-card,
+.card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  box-shadow: 0 16px 32px rgba(56, 42, 28, 0.07);
+}
+
+.metric-card {
+  display: grid;
+  gap: 8px;
+  min-height: 132px;
+  padding: 22px;
+}
+
+.metric-card strong {
+  color: var(--green-dark);
+  font-size: 40px;
+  line-height: 1;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.scan-card,
+.rule-card,
+.activity-card {
+  padding: 22px;
+}
+
+.scan-card {
+  display: grid;
+  gap: 18px;
+}
+
+.scan-card h2,
+.rule-card h2,
+.activity-card h2 {
+  margin-top: 5px;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.scan-card label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.scan-input {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 108px;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+  color: var(--text);
+}
+
+.scan-input button {
+  border: 0;
+  border-radius: 8px;
+  background: var(--green);
+  color: white;
+  font-weight: 850;
+}
+
+.success-box {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #eaf4ee;
+  color: var(--green-dark);
+}
+
+.success-box span {
+  color: #3d6357;
+}
+
+.section-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.rule-card form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rule-card label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.rule-card .wide {
+  grid-column: 1 / -1;
+}
+
+.activity-list {
+  display: grid;
+}
+
+.activity-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0;
+  border-top: 1px dashed var(--line);
+}
+
+.activity-list strong {
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .owner-app {
+    display: block;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    gap: 14px;
+    padding: 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sidebar nav {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    overflow-x: auto;
+  }
+
+  .sidebar a {
+    display: grid;
+    place-items: center;
+    min-height: 42px;
+    padding: 0 8px;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  .workspace {
+    padding: 18px 16px 34px;
+  }
+
+  .topbar {
+    align-items: start;
+  }
+
+  .topbar h1 {
+    font-size: 25px;
+  }
+
+  .metric-grid,
+  .dashboard-grid,
+  .rule-card form {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    min-height: 112px;
+  }
+
+  .scan-input {
+    grid-template-columns: 1fr;
+  }
+
+  .scan-input button {
+    min-height: 46px;
+  }
+
+  .activity-list div {
+    display: grid;
+    gap: 6px;
+  }
+}
